@@ -1,15 +1,355 @@
 <!DOCTYPE html>
-<!-- このファイルはHTMLですという宣言 -->
 <html>
-<!-- ここからHTMLが始まりますというタグ -->
 <head>
-    <!-- ここから裏の設定ですよという宣言 -->
-    <meta charset="ANSI"><!-- 文字化け防止の記述 -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- ややこしいので無視してOK -->
-    <title>譜面一覧</title><!-- ページのタイトルを入れます -->
-</head><!-- ここまでがうらの設定ですよという宣言 -->
-<body>
-    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>メンバー</title>
+    <style>
+        body {
+            color: dimgrey;
+        }
 
-</body><!-- ここまでがページに表示される内容ですよという宣言 -->
-</html><!-- ここまでがHTMLですという終わりの宣言 -->
+        #gnav {
+            background-color: gray;
+            height: 160px;
+            width: 1920px;
+            position: relative;
+            top: -18px;
+            left: -8px;
+            background: url(./header.png);
+        }
+
+            #gnav ul li {
+                display: inline;
+            }
+
+        body {
+            background: #dcdcdc;
+        }
+        /*リンクのデザイン*/
+        a.link {
+            color: #364e96; /*文字色*/
+            border: solid 2px #364e96; /*線色*/
+            padding: 0.5em; /*文字周りの余白*/
+            border-radius: 0.5em; /*角丸*/
+            text-decoration: none;
+            background-color: Highlight;
+            color: #fff;
+            font-weight: bold;
+            width: 500px;
+            text-align: center;
+            margin: 110px auto 0;
+            letter-spacing: 2px;
+            font-size: 50px;
+            position: relative;
+            top: 30px;
+            left: 400px;
+        }
+
+        h1 {
+            font-size: 100px;
+            color: #6cb4e4;
+            text-align: center;
+            padding: 0.25em;
+            border-top: solid 2px #6cb4e4;
+            border-bottom: solid 2px #6cb4e4;
+            background: -webkit-repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+            background: repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+        }
+
+        h2 {
+            font-size: 80px;
+        }
+
+        h2 {
+            border-bottom: solid 3px #29c1d9;
+            position: relative;
+        }
+
+            h2:after {
+                position: absolute;
+                content: " ";
+                display: block;
+                border-bottom: solid 3px #5472cd;
+                bottom: -3px;
+                width: 20%;
+            }
+            /*J-POP*/
+        h3.J {
+            padding: 0.5em 1em;
+            margin: 2em 0;
+            color: dimgray;
+            background: lightblue; /*背景色*/
+            border-top: solid 6px #1dc1d6;
+            box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32); /*影*/
+        }
+
+        h3.J {
+            margin: 0;
+            padding: 0;
+        }
+        /*アニメ*/
+        h3.A {
+            padding: 0.5em 1em;
+            margin: 2em 0;
+            color: dimgray;
+            background: orange; /*背景色*/
+            border-top: solid 6px #1dc1d6;
+            box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32); /*影*/
+        }
+
+        h3.A {
+            margin: 0;
+            padding: 0;
+        }
+        /*キッズ*/
+        h3.K {
+            padding: 0.5em 1em;
+            margin: 2em 0;
+            color: dimgray;
+            Background: hotpink; /*背景色*/
+            border-top: solid 6px #1dc1d6;
+            box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32); /*影*/
+        }
+
+        h3.K {
+            margin: 0;
+            padding: 0;
+        }
+        /*ボーカロイド*/
+        h3.V {
+            padding: 0.5em 1em;
+            margin: 2em 0;
+            color: dimgray;
+            Background: lightgray; /*背景色*/
+            border-top: solid 6px #1dc1d6;
+            box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32); /*影*/
+        }
+
+        h3.V {
+            margin: 0;
+            padding: 0;
+        }
+        /*バラエティ*/
+        h3.V2 {
+            padding: 0.5em 1em;
+            margin: 2em 0;
+            color: dimgray;
+            background: lawngreen; /*背景色*/
+            border-top: solid 6px #1dc1d6;
+            box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32); /*影*/
+        }
+
+        h3.V2 {
+            margin: 0;
+            padding: 0;
+        }
+        /*クラシック*/
+        h3.C {
+            padding: 0.5em 1em;
+            margin: 2em 0;
+            color: dimgray;
+            background: #b8860b; /*背景色*/
+            border-top: solid 6px #1dc1d6;
+            box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32); /*影*/
+        }
+
+        h3.C {
+            margin: 0;
+            padding: 0;
+        }
+        /*ゲーム*/
+        h3.G {
+            padding: 0.5em 1em;
+            margin: 2em 0;
+            color: dimgray;
+            background: #9370db; /*背景色*/
+            border-top: solid 6px #1dc1d6;
+            box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32); /*影*/
+        }
+
+        h3.G {
+            margin: 0;
+            padding: 0;
+        }
+           /*J-POP*/
+        a.J {
+            padding: 0.5em 1em;
+            margin: 2em 0;
+            color: dimgray;
+            background: lightblue; /*背景色*/
+            border-top: solid 6px #1dc1d6;
+            box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32); /*影*/
+            font-size: 60px;
+            font-weight: bold;
+            line-height: 200px;
+        }
+
+            a.J {
+            margin: 0;
+            padding: 0;
+            }
+            /*アニメ*/
+        a.A {
+            padding: 0.5em 1em;
+            margin: 2em 0;
+            color: dimgray;
+            background: orange; /*背景色*/
+            border-top: solid 6px #1dc1d6;
+            box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32); /*影*/
+            font-size: 60px;
+            font-weight: bold;
+            line-height: 200px;
+        }
+
+            a.A {
+            margin: 0;
+            padding: 0;
+             }
+            /*キッズ*/
+        a.K {
+            padding: 0.5em 1em;
+            margin: 2em 0;
+            color: silver;
+            Background: hotpink; /*背景色*/
+            border-top: solid 6px #1dc1d6;
+            box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32); /*影*/
+            font-size: 60px;
+            font-weight: bold;
+            line-height: 200px;
+        }
+
+        a.K {
+            margin: 0;
+            padding: 0;
+        }
+        /*ボーカロイド*/
+        a.V {
+            padding: 0.5em 1em;
+            margin: 2em 0;
+            color: dimgray;
+            Background: lightgray; /*背景色*/
+            border-top: solid 6px #1dc1d6;
+            box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32); /*影*/
+            font-size: 60px;
+            font-weight: bold;
+            line-height: 200px;
+        }
+
+        a.V {
+            margin: 0;
+            padding: 0;
+        }
+        /*バラエティ*/
+        a.V2 {
+            padding: 0.5em 1em;
+            margin: 2em 0;
+            color: dimgray;
+            background: lawngreen; /*背景色*/
+            border-top: solid 6px #1dc1d6;
+            box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32); /*影*/
+            font-size: 60px;
+            font-weight: bold;
+            line-height: 200px;
+        }
+
+        a.V2 {
+            margin: 0;
+            padding: 0;
+        }
+        /*クラシック*/
+        a.C {
+            padding: 0.5em 1em;
+            margin: 2em 0;
+            color: white;
+            background: #b8860b; /*背景色*/
+            border-top: solid 6px #1dc1d6;
+            box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32); /*影*/
+            font-size: 60px;
+            font-weight: bold;
+            line-height: 200px;
+        }
+
+        a.C {
+            margin: 0;
+            padding: 0;
+        }
+        /*ゲーム*/
+        a.G {
+            padding: 0.5em 1em;
+            margin: 2em 0;
+            color: white;
+            background: #9370db; /*背景色*/
+            border-top: solid 6px #1dc1d6;
+            box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32); /*影*/
+            font-size: 60px;
+            font-weight: bold;
+            line-height: 200px;
+        }
+
+        a.G {
+            margin: 0;
+            padding: 0;
+        }
+        /*WE*/
+        a.WE {
+            padding: 0.5em 1em;
+            margin: 2em 0;
+            color: white;
+            background: black; /*背景色*/
+            border-top: solid 6px #1dc1d6;
+            box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32); /*影*/
+            font-size: 60px;
+            font-weight: bold;
+            line-height: 200px;
+        }
+
+        a.WE {
+            margin: 0;
+            padding: 0;
+        }
+        h3 {
+            font-size: 60px;
+        }
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <p class="resizeimage">
+        <nav id="gnav">
+            <ul class="inner">
+                <li><a href="chart.html" class="link">譜面一覧</a></li>
+                <li><a href="member.html" class="link">メンバー</a></li>
+                <li><a href="update.html" class="link">更新履歴</a></li>
+                <li><a href="new.html" class="link">お知らせ</a></li>
+                <li><a href="Recruitment.html" class="link">メンバー募集</a></li>
+            </ul>
+        </nav>
+        <h1>譜面一覧</h1>
+        <h2>J-POP</h2>
+        <h3 class="J">まだ譜面はありません</h3>
+        <h2>アニメ</h2>
+        <h3 class="A">まだ譜面はありません</h3>
+        <h2>キッズ</h2>
+        <h3 class="K">まだ譜面はありません</h3>
+        <h2>ボーカロイド</h2>
+        <h3 class="V">まだ譜面はありません</h3>
+        <h2>バラエティ</h2>
+        <a href="https://ux.getuploader.com/TEAMHUMEN/download/3" class="V2">J219 ND:餅</a><br>
+        <a href="https://ux.getuploader.com/TEAMHUMEN/download/4" class="V2">人　身　事　故　で　停　止 ND:餅</a><br>
+        <a href="https://ux.getuploader.com/TEAMHUMEN/download/5" class="V2">KIRBY-CHAN'D CANYON ND:餅</a><br>
+        <a href="https://ux.getuploader.com/TEAMHUMEN/download/6" class="V2">競輪融解 ND:餅</a><br>
+
+
+        <h2>クラシック</h2>
+        <h3 class="C">まだ譜面はありません</h3>
+        <h2>ゲームミュージック</h2>
+        <a href="https://ux.getuploader.com/TEAMHUMEN/download/1" class="G">再生不能 ND:餅</a><br>
+        <a href="https://ux.getuploader.com/TEAMHUMEN/download/2" class="WE">恋はりんりん☆あーりんべる[？] ND:餅</a><br>
+        <h2>World's End</h2>
+        <a href="https://ux.getuploader.com/TEAMHUMEN/download/2" class="WE">恋はりんりん☆あーりんべる[？] ND:餅</a><br>
+    </p>
+</body>
+</html>

@@ -1,15 +1,106 @@
 <!DOCTYPE html>
-<!-- このファイルはHTMLですという宣言 -->
 <html>
-<!-- ここからHTMLが始まりますというタグ -->
 <head>
-    <!-- ここから裏の設定ですよという宣言 -->
-    <meta charset="ANSI"><!-- 文字化け防止の記述 -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- ややこしいので無視してOK -->
-    <title>30分で作るホームページ</title><!-- ページのタイトルを入れます -->
-</head><!-- ここまでがうらの設定ですよという宣言 -->
-<body>
-    <!-- ここからページに表示される内容ですよという宣言 -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>更新履歴</title>
+    <style>
+        body {
+            color: dimgrey;
+        }
 
-</body><!-- ここまでがページに表示される内容ですよという宣言 -->
-</html><!-- ここまでがHTMLですという終わりの宣言 -->
+        #gnav {
+            background-color: gray;
+            height: 160px;
+            width: 1920px;
+            position: relative;
+            top: -18px;
+            left: -8px;
+            background: url(./header.png);
+        }
+
+            #gnav ul li {
+                display: inline;
+            }
+
+        body {
+            background: #dcdcdc;
+        }
+        /*リンクのデザイン*/
+        a {
+            color: #364e96; /*文字色*/
+            border: solid 2px #364e96; /*線色*/
+            padding: 0.5em; /*文字周りの余白*/
+            border-radius: 0.5em; /*角丸*/
+            text-decoration: none;
+            background-color: Highlight;
+            color: #fff;
+            font-weight: bold;
+            width: 500px;
+            text-align: center;
+            margin: 110px auto 0;
+            letter-spacing: 2px;
+            font-size: 50px;
+            position: relative;
+            top: 30px;
+            left: 400px;
+        }
+
+        h1 {
+            font-size: 100px;
+            color: #6cb4e4;
+            text-align: center;
+            padding: 0.25em;
+            border-top: solid 2px #6cb4e4;
+            border-bottom: solid 2px #6cb4e4;
+            background: -webkit-repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+            background: repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+        }
+
+        h2 {
+            font-size: 80px;
+        }
+
+        h2 {
+            border-bottom: solid 3px #29c1d9;
+            position: relative;
+        }
+
+            h2:after {
+                position: absolute;
+                content: " ";
+                display: block;
+                border-bottom: solid 3px #5472cd;
+                bottom: -3px;
+                width: 20%;
+            }
+
+            h2:first-letter {
+                font-size: 2em;
+                color: #7172ac;
+            }
+
+        h3 {
+            font-size: 60px;
+        }
+    </style>
+</head>
+<body>
+    <p class="resizeimage">
+        <nav id="gnav">
+            <ul class="inner">
+                <li><a href="chart.html">譜面一覧</a></li>
+                <li><a href="member.html">メンバー</a></li>
+                <li><a href="update.html">更新履歴</a></li>
+                <li><a href="new.html">お知らせ</a></li>
+                <li><a href="Recruitment.html">メンバー募集</a></li>
+            </ul>
+        </nav>
+        <h1>更新履歴</h1>
+        <h2>2022/4/18</h2>
+        <h3>このサイトのメインである譜面配布のリンクを貼らせていただきました～</h3>
+        <h2>2022/4/17</h2>
+        <h3>メンバー、お知らせ、トップ、募集ページ(仮)作成しました</h3>
+    </p>
+</body>
+</html>
